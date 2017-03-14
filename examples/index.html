@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legoland-components</title>
+    <link rel="shortcut icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+    <link href="../bower_components/legoland/dist/legoland.css" rel="stylesheet">
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/class/index.js"></script>
+    <script src="../bower_components/util/util.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/overlay/index.css" />
+    <script src="../bower_components/overlay/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/picker/index.css" />
+    <script src="../bower_components/picker/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/datepicker/index.css" />
+    <script src="../bower_components/datepicker/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/timepicker/index.css" />
+    <script src="../bower_components/timepicker/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/datetimepicker/index.css" />
+    <script src="../bower_components/datetimepicker/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/citypicker/index.css" />
+    <script src="../bower_components/citypicker/city.js"></script>
+    <script src="../bower_components/citypicker/index.js"></script>
+    <script src="../clearable.js"></script>
+    <script src="../picker.js"></script>
+</head>
+
+<body>
+    <div class="lg-grid-row">
+        <div class="lg-grid-6 lg-form-block">
+            <label>日期时间：</label>
+            <input type="text" lg-picker="date" lg-clearable />
+            <span>-</span>
+            <input type="text" lg-picker="time" />
+            <span>-</span>
+            <input type="text" lg-picker="datetime" />
+        </div>
+        <div class="lg-grid-6 lg-form-block">
+            <label class="lg-require">required：</label>
+            <input type="text" />
+        </div>
+        <div class="lg-grid-6 lg-form-block">
+            <label>价格：</label>
+            <input type="text" lg-clearable /><span>￥/㎡</span>
+        </div>
+        <div class="lg-grid-6 lg-form-block">
+            <label>所在区域：</label>
+            <input type="text" lg-picker="city" />
+        </div>
+    </div>
+    <div class="lg-grid-row">
+        <div class="lg-grid-6 lg-form-block">
+            <label>text：</label>
+            <textarea></textarea>
+        </div>
+        <div class="lg-grid-6 lg-form-block">
+            <label class="lg-require">required：</label>
+            <textarea></textarea>
+        </div>
+    </div>
+    <div class="lg-grid-row">
+        <div class="lg-grid-6 lg-form-block">
+            <label>select：</label>
+            <select>
+                <option>shanghai</option>
+                <option>beijing</option>
+                <option>guangzhou</option>
+            </select>
+        </div> 
+    </div>
+    <div class="lg-grid-row">
+        <div class="lg-grid-6 lg-form-block"> 
+            <label>checkbox：</label>
+                <span class="lg-checkbox">
+                    <input type="checkbox" id="c_1" />
+                    <label for="c_1">red</label>
+                </span>
+                <span class="lg-checkbox">
+                    <input type="checkbox" id="c_2" />
+                    <label for="c_2">orange</label>
+                </span>
+                <span class="lg-checkbox">
+                    <input type="checkbox" id="c_3" />
+                    <label for="c_3">yellow</label>
+                </span>
+                <span class="lg-checkbox">
+                    <input type="checkbox" id="c_4" />
+                    <label for="c_4">green</label>
+                </span> 
+        </div>
+    </div>
+    <div class="lg-grid-row">
+        <div class="lg-grid-6 lg-form-block">
+            <label>radio：</label> 
+                <span class="lg-radio">
+                    <input type="radio" id="r_1" name="r" />
+                    <label for="r_1">gold</label>
+                </span>
+                <span class="lg-radio">
+                    <input type="radio" id="r_2" name="r" />
+                    <label for="r_2">wood</label>
+                </span>
+                <span class="lg-radio">
+                    <input type="radio" id="r_3" name="r" />
+                    <label for="r_3">water</label>
+                </span>
+                <span class="lg-radio">
+                    <input type="radio" id="r_4" name="r" />
+                    <label for="r_4">fire</label>
+                </span> 
+        </div>
+    </div>
+</div>
+</body>
+</html>
