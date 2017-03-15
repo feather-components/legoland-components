@@ -47,6 +47,7 @@ var ClearAble = Class.$factory('clearable', {
 
         self.$icon.click(function(){
             $dom.val('').focus();
+            self.trigger('clear');
             self.close();
         });
 

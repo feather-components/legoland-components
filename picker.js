@@ -17,12 +17,22 @@ if(typeof define == 'function' && define.amd){
 
 $(document)
     .on('click.lg.picker', 'input[lg-picker]', function(){
-        var picker = $(this).attr('lg-picker') + 'picker';
+        var $this = $(this);
+        var picker = $this.attr('lg-picker') + 'picker';
 
         if(picker in $.fn){
-            $(this)[picker]('open');
+            $this[picker]('open');
         }else{
             throw new Error('Picker [' + picker + '] not found!');
+        }
+
+        if(picker == 'datepicker'){
+            $this.datepicker().off('clearable:clear').on('clearable:clear', function(){
+                $this.datepicker('backToday');
+                setTimeout(function(){
+                    $this.datepicker('open');
+                }, 0);
+            });
         }
     });
 });
