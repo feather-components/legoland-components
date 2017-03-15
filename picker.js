@@ -26,13 +26,15 @@ $(document)
             throw new Error('Picker [' + picker + '] not found!');
         }
 
-        if(picker == 'datepicker'){
-            $this.datepicker().off('clearable:clear').on('clearable:clear', function(){
-                $this.datepicker('backToday');
-                setTimeout(function(){
-                    $this.datepicker('open');
-                }, 0);
-            });
+        if(picker != 'datepicker'){
+            return ;
         }
+            
+        $this.datepicker().off('clearable:clear').on('clearable:clear', function(){
+            $this.datepicker('backToday');
+            setTimeout(function(){
+                $this.datepicker('open');
+            }, 0);
+        });
     });
 });
